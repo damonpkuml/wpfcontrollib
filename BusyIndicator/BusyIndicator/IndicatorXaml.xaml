@@ -1,0 +1,158 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:sys="clr-namespace:System;assembly=mscorlib" 
+             xmlns:local="clr-namespace:BusyIndicator"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" mc:Ignorable="d" x:Class="BusyIndicator.IndicatorXaml"
+             >
+    <UserControl.Resources>
+        <sys:String x:Key="data">M 0,0 L -10,0 L -10,-60 L 0,-70 L 10,-60 L 10,0 Z</sys:String>
+        <TranslateTransform x:Key="tt" Y="-50"/>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetName="p1" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.08" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p2" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.16" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p3" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.24" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p4" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.32" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p5" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.40" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p6" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.48" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p7" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.56" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p8" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.64" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p9" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.72" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p10" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.80" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p11" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.88" 
+                                     RepeatBehavior="Forever"/>
+                    <DoubleAnimation Storyboard.TargetName="p12" Storyboard.TargetProperty="Opacity" 
+                                     From="1.0" To="0.2" Duration="0:0:1" BeginTime="0:0:0.96" 
+                                     RepeatBehavior="Forever"/>
+                </Storyboard>
+
+
+
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Grid >
+        <Path x:Name="p1" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="30"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p2" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="60"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p3" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="90"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p4" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="120"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p5" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="150"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p6" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="180"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p7" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="210"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p8" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="240"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p9" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="270"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p10" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="300"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p11" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="330"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+        <Path x:Name="p12" Data="{Binding Source={StaticResource data}}" Stroke="DarkGreen" Fill="LawnGreen" Opacity="0.2">
+            <Path.RenderTransform>
+                <TransformGroup>
+                    <StaticResource ResourceKey="tt"/>
+                    <RotateTransform Angle="0"/>
+                </TransformGroup>
+            </Path.RenderTransform>
+        </Path>
+    </Grid>
+</UserControl>
